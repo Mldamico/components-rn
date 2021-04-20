@@ -36,6 +36,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = components/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = components/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = components/main.m; sourceTree = "<group>"; };
+		60AECC21262EF8A9005B6FA8 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = components/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B298F2A4A97B1834D37AA12 /* Pods-components-componentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-components-componentsTests.debug.xcconfig"; path = "Target Support Files/Pods-components-componentsTests/Pods-components-componentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9CEDAB314D8F0B6B0B453891 /* libPods-components.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-components.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,8 +115,15 @@
 				9B298F2A4A97B1834D37AA12 /* Pods-components-componentsTests.debug.xcconfig */,
 				EA6AE48564C7687C9805124E /* Pods-components-componentsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		60AECC1C262EF899005B6FA8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				60AECC21262EF8A9005B6FA8 /* Ionicons.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -128,6 +136,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				60AECC1C262EF899005B6FA8 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* components */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* componentsTests */,
