@@ -13,12 +13,12 @@ export const FlastListItem = ({menuItem}: Props) => {
   return (
     <TouchableOpacity onPress={() => navigation.navigate(menuItem.component)}>
       <View style={styles.container}>
-        <Icon name={menuItem.icon} size={23} color="grey" />
+        <Icon name={menuItem.icon} size={23} color="#5856D6" />
         <Text style={styles.itemText}>{menuItem.name}</Text>
         <Icon
           name="chevron-forward-outline"
           size={23}
-          color="grey"
+          color="#5856D6"
           style={{justifyContent: 'flex-end'}}
         />
       </View>
