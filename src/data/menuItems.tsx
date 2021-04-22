@@ -30,4 +30,9 @@ export const menuItems: MenuItem[] = [
     icon: 'refresh-outline',
     component: 'PullToRefreshScreen',
   },
+  {
+    name: 'Section list',
+    icon: 'list-outline',
+    component: 'SectionListScreen',
+  },
 ];
