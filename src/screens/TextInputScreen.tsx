@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {useState} from 'react';
 import {
   Keyboard,
@@ -15,8 +15,10 @@ import {CustomSwitch} from '../components/CustomSwitch';
 import {HeaderTitle} from '../components/HeaderTitle';
 import {appTheme} from '../theme/appTheme';
 import {useForm} from '../hooks/useForm';
+import {ThemeContext} from '../context/theme/ThemeContext';
 
 export const TextInputScreen = () => {
+  const {theme} = useContext(ThemeContext);
   // const [form, setForm] = useState({
   //   name: '',
   //   email: '',
@@ -44,21 +46,33 @@ export const TextInputScreen = () => {
           <View style={appTheme.globalMargin}>
             <HeaderTitle title="Text input" />
             <TextInput
-              style={styles.textInputStyle}
+              style={{
+                ...styles.textInputStyle,
+                borderColor: theme.colors.text,
+                color: theme.colors.text,
+              }}
               placeholder="Ingrese su nombre"
               onChangeText={value => onChange(value, 'name')}
               autoCorrect={false}
               autoCapitalize="words"
+              placeholderTextColor={theme.dividerColor}
             />
             <TextInput
-              style={styles.textInputStyle}
+              style={{
+                ...styles.textInputStyle,
+                borderColor: theme.colors.text,
+                color: theme.colors.text,
+              }}
               placeholder="Ingrese su email"
               autoCapitalize="none"
               onChangeText={value => onChange(value, 'email')}
               keyboardType="email-address"
+              placeholderTextColor={theme.dividerColor}
             />
             <View style={styles.switchRow}>
-              <Text style={styles.switchText}>isSuscribe</Text>
+              <Text style={{...styles.switchText, color: theme.colors.text}}>
+                isSuscribe
+              </Text>
               <CustomSwitch
                 isOn={isSuscribe}
                 onChange={value => onChange(value, 'isSuscribe')}
@@ -86,7 +100,6 @@ const styles = StyleSheet.create({
     height: 50,
     paddingHorizontal: 10,
     borderRadius: 10,
-    borderColor: 'rgba(0,0,0,0.3)',
     marginVertical: 10,
   },
   switchRow: {

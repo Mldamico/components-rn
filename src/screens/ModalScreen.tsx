@@ -1,10 +1,14 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {Button, StyleSheet, Text, View, Modal} from 'react-native';
 import {HeaderTitle} from '../components/HeaderTitle';
+import {ThemeContext} from '../context/theme/ThemeContext';
 import {appTheme} from '../theme/appTheme';
 
 export const ModalScreen = () => {
   const [modal, setModal] = useState(false);
+  const {
+    theme: {colors},
+  } = useContext(ThemeContext);
   const openModal = () => {
     setModal(true);
   };
@@ -22,7 +26,9 @@ export const ModalScreen = () => {
           }}>
           <View
             style={{
-              backgroundColor: 'white',
+              borderColor: colors.border,
+              borderWidth: 1,
+              backgroundColor: colors.background,
               width: 300,
               height: 300,
               justifyContent: 'center',
